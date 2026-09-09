@@ -1,2 +1,6 @@
-# smtarout-school
-منصة تفاعلية وبطاقة جاهزية رقمية تقدم توصيات عملية وموجهات تربوية للمعلمين والمعلمات قبل وأثناء وبعد الحصة الدراسية، للتحضير لزيارات فريق التقويم الخارجي وتحقيق أعلى مستويات الجودة والكمال.
+# دليل التقويم الخاص بالمتوسطة الاولى بتاروت
+
+A Pen created on CodePen.
+
+Original URL: [https://codepen.io/MARYAM-YAHIA/pen/LEWZZQQ](https://codepen.io/MARYAM-YAHIA/pen/LEWZZQQ).
+

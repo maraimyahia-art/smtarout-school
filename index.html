@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدرسة المتوسطة الأولى بتاروت - دليل التقويم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <div class="container" id="pdf-content">
+        <!-- الهيدر الرئيسي -->
+        <header class="main-header">
+            <div class="school-tag">
+                <i class="fa-solid fa-school"></i>
+                <span>المدرسة المتوسطة الأولى بتاروت</span>
+            </div>
+
+            <div class="header-title">
+                <h1>توصيات للمعلمين قبل زيارة فريق التقويم الخارجي</h1>
+                <p>مرجع عملي تفاعلي قبل الحصة وأثنائها وبعدها</p>
+            </div>
+
+            <div class="actions-box" data-html2canvas-ignore="true">
+                <button id="download-pdf-btn" class="action-btn pdf-btn">
+                    <i class="fa-solid fa-file-pdf"></i> تصدير PDF
+                </button>
+                <button id="reset-btn" class="action-btn reset-btn">
+                    <i class="fa-solid fa-rotate-right"></i> إعادة إعادة
+                </button>
+            </div>
+        </header>
+
+        <!-- شريط التقدم التفاعلي المتحرك -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>مستوى الجاهزية والكمال:</span>
+                <span id="progress-text" class="status-badge">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- أزرار الفلترة والتصنيف -->
+        <div class="filter-container" data-html2canvas-ignore="true">
+            <button class="filter-btn active" data-filter="all">عرض الكل</button>
+            <button class="filter-btn" data-filter="before">قبل الحصة</button>
+            <button class="filter-btn" data-filter="during">أثناء الحصة</button>
+            <button class="filter-btn" data-filter="after">بعد النشاط</button>
+        </div>
+
+        <!-- شبكة البطاقات التفاعلية -->
+        <main class="grid-container">
+            
+            <!-- بطاقة 1: قبل الحصة -->
+            <section class="card blue-card" data-category="before">
+                <div class="card-header">
+                    <i class="fa-solid fa-book-open icon"></i>
+                    <h2>قبل الحصة</h2>
+                    <span class="card-count">0/6</span>
+                </div>
+                <ul class="card-list interactive-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>ناتج تعلم واضح وقابل للقياس</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تهيئة محفزة مرتبطة بالدرس</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تخطيط زمني مناسب</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>أسئلة تفكير عليا</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>أنشطة تراعي الفروق الفردية</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تجهيز الوسائل والتأكد من صلاحيتها</span></li>
+                </ul>
+            </section>
+
+            <!-- بطاقة 2: أثناء الحصة -->
+            <section class="card green-card" data-category="during">
+                <div class="card-header">
+                    <i class="fa-solid fa-chalkboard-user icon"></i>
+                    <h2>أثناء الحصة</h2>
+                    <span class="card-count">0/6</span>
+                </div>
+                <ul class="card-list interactive-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>الطالب يفكر ويناقش ويطبق</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>المعلم يوجه ويتابع جميع الطلاب</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تقويم تكويني مستمر</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>أسئلة: كيف؟ لماذا؟ وما الدليل؟</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تعزيز محدد ولفظ تربوي محترم</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>نبرة صوت واضحة ومتنوعة</span></li>
+                </ul>
+            </section>
+
+            <!-- بطاقة 3: بعد النشاط -->
+            <section class="card purple-card" data-category="after">
+                <div class="card-header">
+                    <i class="fa-solid fa-list-check icon"></i>
+                    <h2>بعد النشاط</h2>
+                    <span class="card-count">0/4</span>
+                </div>
+                <ul class="card-list interactive-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>قياس حقيقي لنتائج التعلم</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>بطاقة خروج أو مهمة تطبيقية</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>غلق الدرس والتأمل</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>تحديد من يحتاج دعماً أو إثراءً</span></li>
+                </ul>
+            </section>
+
+            <!-- بطاقة 4: ممارسات أساسية -->
+            <section class="card orange-card" data-category="all">
+                <div class="card-header">
+                    <i class="fa-solid fa-gear icon"></i>
+                    <h2>ممارسات أساسية</h2>
+                    <span class="card-count">0/5</span>
+                </div>
+                <ul class="card-list interactive-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>استخدم الاستراتيجية لخدمة التعلم</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>اربط الدرس بالحياة والوطن والقيم</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>عزز السلوك الإيجابي</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>قلل المشتتات ولا تنشغل بالزائرين</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>لا تحصر المشاركة في المتفوقين</span></li>
+                </ul>
+            </section>
+
+            <!-- بطاقة 5: إدارة حصة 50 دقيقة (تفاعلية) -->
+            <section class="card yellow-card" data-category="all">
+                <div class="card-header">
+                    <i class="fa-solid fa-clock icon"></i>
+                    <h2>إدارة حصة 50 دقيقة</h2>
+                    <span class="card-count">0/7</span>
+                </div>
+                <ul class="card-list interactive-list time-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>التهيئة</span> <strong class="badge">3 - 5 دقائق</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>التقويم القَبلي</span> <strong class="badge">3 دقائق</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>بناء التعلم</span> <strong class="badge">10 دقائق</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>التطبيق</span> <strong class="badge">15 دقيقة</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>المناقشة والتقويم التكويني</span> <strong class="badge">8 دقائق</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>الختام</span> <strong class="badge">5 دقائق</strong></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>الغلق</span> <strong class="badge">2 - 3 دقائق</strong></li>
+                </ul>
+            </section>
+
+            <!-- بطاقة 6: أهم 10 رسائل (تفاعلية) -->
+            <section class="card teal-card" data-category="all">
+                <div class="card-header">
+                    <i class="fa-solid fa-bullhorn icon"></i>
+                    <h2>أهم 10 رسائل</h2>
+                    <span class="card-count">0/5</span>
+                </div>
+                <ul class="card-list interactive-list">
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>قدم درساً ممتعاً لا استعراضياً</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>الطلاب محور الحصة</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>اربط كل نشاط بناتج التعلم</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>قوم التعلم طوال الدرس</span></li>
+                    <li><i class="fa-regular fa-square checkbox"></i> <span>أطلب التفسير والتبرير والاستنتاج</span></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- التذييل -->
+        <footer class="footer-quote">
+            <p>لا تسأل: ماذا يريد فريق التقويم أن يراني أفعل؟ <br>
+            <strong>بل اسأل: ماذا يحتاج طلابي لكي يتعلموا بصورة أفضل؟</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
